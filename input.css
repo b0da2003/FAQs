@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("assets/images/background-pattern-desktop.svg");
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  padding: 5rem 0 5rem 0;
+}
+
+p {
+  display: none;
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  padding-top: 1rem;
+  line-height: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+}
+span {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  color: hsl(292, 42%, 14%);
+}
+.about {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Work Sans", sans-serif;
+  color: hsl(292, 42%, 14%);
+}
+.mainBody {
+  height: 75dvh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 630px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.8rem;
+  box-shadow: 0px 2px 15px -4px rgb(167, 167, 167);
+}
+.top {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0 2rem 0.5rem;
+}
+.Ques {
+  display: grid;
+  align-items: center;
+  padding: 1.3rem 0 1.3rem 0;
+  grid-template-columns: 1fr auto;
+  border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.Ques.fix {
+  grid-template-rows: auto auto;
+}
+.Ques.boda {
+  border-bottom: none;
+}
+.Ques img {
+  cursor: pointer;
+}
+.top img {
+  padding-right: 1.8rem;
+  width: 4rem;
+}
+.open {
+  display: block;
+  animation: fade 0.8s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.minus {
+  animation: fadeTwo 0.8s ease-in;
+}
+@keyframes fadeTwo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-image: url("assets/images/background-pattern-mobile.svg");
+  }
+  .about {
+    font-size: 2.5rem;
+  }
+  .top img {
+    width: 3rem;
+    padding-right: 1rem;
+  }
+  .container {
+    width: 90%;
+  }
+  .Ques {
+    column-gap: 1rem;
+    grid-template-rows: repeat(2, auto);
+  }
+}
